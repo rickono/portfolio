@@ -1,19 +1,17 @@
 import React from 'react';
+import Parallax from './Parallax';
 
 const Hero = () => {
   return (
     <div className='min-h-screen w-full bg-gray-800 text-white relative flex items-center justify-center'>
-      <div className=''>
-        <p className='text-2xl '>Hello, I&apos;m</p>
-        <h1 className='text-8xl font-bold'>Rick Ono</h1>
-        <p className='font-mono text-gray-400 text-xl leading-2'>{`// MIT Class of 2023`}</p>
-        <p className='font-mono text-gray-400 text-xl leading-2'>{`// Course 6-3, Computer Science`}</p>
-        <div>
-          <button>About</button>
-          <button>Projects</button>
-          <button>Contact</button>
+      <Parallax offset={-100}>
+        <div className='mb-20'>
+          <p className='text-2xl '>Hello, I&apos;m</p>
+          <h1 className='text-8xl font-bold'>Rick Ono</h1>
+          <p className='font-mono text-gray-400 text-xl leading-2'>{`// MIT Class of 2023`}</p>
+          <p className='font-mono text-gray-400 text-xl leading-2'>{`// Course 6-3, Computer Science`}</p>
         </div>
-      </div>
+      </Parallax>
       <div className='absolute -bottom-1 left-0 w-full overflow-hidden leading-0 rotate-180'>
         <svg
           data-name='Layer 1'

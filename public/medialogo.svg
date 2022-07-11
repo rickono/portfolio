@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="563" height="568" fill="none" viewBox="0 0 563 568">
   <g clip-path="url(#a)">
-    <path fill="#fff" d="M0 0h563v568H0z"/>
+    <path fill="none" d="M0 0h563v568H0z"/>
     <path fill="#000" d="M486.003 568V324.566H242.998V81.146H0V0h324.002v243.427H567v324.566h-80.997V568ZM.036 243.427v324.566h323.959v-81.14H80.997V243.427H.036Z"/>
   </g>
   <defs>
