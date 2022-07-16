@@ -34,11 +34,11 @@ const Education = () => {
       <div className='flex flex-col justify-center items-center'>
         <div className='flex flex-col gap-1 rounded-lg drop-shadow-lg bg-white p-6'>
           <h3 className='text-2xl font-bold mb-2'>Coursework</h3>
-          <div className='grid grid-cols-3 gap-1'>
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-1'>
             {courses.map((course) => (
               <p
                 key={course}
-                className='pl-2 pr-6 py-1 before:-z-50 relative cursor-pointer before:-z-1 before:w-0 before:transition-all before:bg-blue-500 hover:text-slate-50 transition-all before:rounded-md hover:before:w-full before:h-full before:absolute before:top-0 before:left-0 before:text-white'
+                className='pl-2 pr-6 py-1 before:-z-50 relative cursor-pointer before:-z-1 before:w-0 before:transition-all before:bg-gray-500 hover:text-slate-50 transition-all before:rounded-md hover:before:w-full before:h-full before:absolute before:top-0 before:left-0 before:text-white'
               >
                 {course}
                 <Icon

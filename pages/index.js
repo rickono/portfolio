@@ -9,12 +9,10 @@ import Projects from '../components/Projects';
 export default function Home() {
   return (
     <div>
-      <main>
-        <Hero />
-        <About />
-        <ProjectsTransition />
-        <Projects />
-      </main>
+      <Hero />
+      <About />
+      <ProjectsTransition />
+      <Projects />
     </div>
   );
 }

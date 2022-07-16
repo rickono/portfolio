@@ -49,7 +49,12 @@ const JobDetails = ({ company, details }) => {
         <p className='italic'>{details.position}</p>
         <div className='flex gap-4 items-center my-4'>
           {details.icons.map((icon) => (
-            <Icon icon={icon} key={icon} height='30' width='30' />
+            <Icon
+              icon={icon}
+              key={`${company}${icon}`}
+              height='30'
+              width='30'
+            />
           ))}
         </div>
         <p className='mb-4'>{details.description}</p>
@@ -114,7 +119,7 @@ const Jobs = () => {
         'logos:c',
       ],
       description:
-        'I worked with the Conformable Decoders group at the MIT Media Lab on a smart-facemask project, which records biosignatures through various sensors on a typical surgical mask. We submitted a paper to Nature Electronics which is currently in review.',
+        'I worked with the Conformable Decoders group at the MIT Media Lab on a smart-facemask project, which records biosignatures through various sensors on a typical surgical mask. We submitted a paper to Nature Electronics that is currently in review.',
       responsibilities: [
         'Created a mobile app in React Native to connect to the facemask using BLE for easy data collection.',
         'Made a Flask server with a PostgreSQL database to store data from the facemask, and deployed the server to an Ubuntu VM using NGINX.',
@@ -129,36 +134,40 @@ const Jobs = () => {
         'logos:python',
         'logos:pytorch-icon',
       ],
-      description: 'The Conformable Decoders group...',
-      responsibilities: ['Responsibility 1', 'Responsibility 2'],
+      description:
+        'The Computational Neuroscience Laboratory, led by Dr. Caterina Stamoulis researches brain dynamics and networks given high-dimensional data, and works to develop novel signal processing techniques.',
+      responsibilities: [
+        'Used machine learning tools, such as the MATLAB Deep Learning Toolbox and PyTorch to perform classifications on the Adolescent Brain Cognitive Development dataset.',
+        'Developed a pipeline in MATLAB for performing machine learning classifications on arbitrary data without need for extensive machine learning knowledge.',
+      ],
     },
   };
   return (
-    <div className='grid gap-8 lg:grid-cols-2 xl:grid-cols-3'>
-      <div className='relative'>
-        {experience.map((job) => (
-          <div
-            key={job.company}
-            className='relative py-5 md:pr-10 before:absolute before:bottom-1/2 before:-right-1 before:h-3 before:w-3 before:rounded-full md:before:bg-black after:absolute after:bottom-0 md:after:bg-black after:h-full after:w-1 after:right-0'
-          >
-            <JobCard
-              {...job}
-              setSelected={setSelected}
-              isSelected={selected === job.company}
-            />
-          </div>
-        ))}
+    <>
+      <h2 className='text-5xl font-bold'>Work Experience</h2>
+      <div className='grid gap-8 lg:grid-cols-2 xl:grid-cols-3'>
+        <div className='relative flex flex-col gap-6'>
+          {experience.map((job) => (
+            <div key={job.company} className='relative'>
+              <JobCard
+                {...job}
+                setSelected={setSelected}
+                isSelected={selected === job.company}
+              />
+            </div>
+          ))}
+        </div>
+        <div className='xl:col-span-2'>
+          {Object.keys(jobDetails).map((job) => {
+            return (
+              job === selected && (
+                <JobDetails details={jobDetails[job]} company={job} />
+              )
+            );
+          })}
+        </div>
       </div>
-      <div className='xl:col-span-2'>
-        {Object.keys(jobDetails).map((job) => {
-          return (
-            job === selected && (
-              <JobDetails details={jobDetails[job]} company={job} />
-            )
-          );
-        })}
-      </div>
-    </div>
+    </>
   );
 };
 

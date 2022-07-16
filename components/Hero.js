@@ -3,15 +3,13 @@ import Parallax from './Parallax';
 
 const Hero = () => {
   return (
-    <div className='min-h-screen w-full bg-gray-800 text-white relative flex items-center justify-center'>
-      <Parallax offset={-100}>
-        <div className='mb-20'>
-          <p className='text-2xl '>Hello, I&apos;m</p>
-          <h1 className='text-8xl font-bold'>Rick Ono</h1>
-          <p className='font-mono text-gray-400 text-xl leading-2'>{`// MIT Class of 2023`}</p>
-          <p className='font-mono text-gray-400 text-xl leading-2'>{`// Course 6-3, Computer Science`}</p>
-        </div>
-      </Parallax>
+    <div className='min-h-min py-32 lg:py-0 lg:min-h-screen w-full bg-gray-800 text-white relative flex items-center justify-center'>
+      <div className='mb-32'>
+        <p className='text-2xl '>Hello, I&apos;m</p>
+        <h1 className='text-7xl lg:text-8xl font-bold'>Rick Ono</h1>
+        <p className='font-mono text-gray-400 text-lg lg:text-xl leading-2'>{`// MIT Class of 2023`}</p>
+        <p className='font-mono text-gray-400 text-lg lg:text-xl leading-2'>{`// Course 6-3, Computer Science`}</p>
+      </div>
       <div className='absolute -bottom-1 left-0 w-full overflow-hidden leading-0 rotate-180'>
         <svg
           data-name='Layer 1'
