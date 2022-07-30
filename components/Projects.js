@@ -85,6 +85,32 @@ const Projects = () => {
           I enjoy working on side-projects in my free time to express my
           creativity and expand knowledge about new technologies.
         </p>
+        <div className='grid grid-cols-1 gap-10 md:grid-cols-2 bg-gray-900 bg-opacity-50 rounded-lg p-6'>
+          <div className='flex flex-col items-center'>
+            <p className='text-lg font-bold'>
+              Technologies I&apos;m comfortable with
+            </p>
+            <div className='flex flex-row gap-3 items-center justify-center py-3'>
+              <Icon width='32' height='32' icon='simple-icons:typescript' />
+              <Icon width='32' height='32' icon='akar-icons:react-fill' />
+              <Icon width='32' height='32' icon='akar-icons:nextjs-fill' />
+              <Icon width='32' height='32' icon='akar-icons:python-fill' />
+              <Icon width='32' height='32' icon='akar-icons:postgresql-fill' />
+              <Icon width='32' height='32' icon='file-icons:prisma' />
+              <Icon width='32' height='32' icon='emojione-monotone:letter-c' />
+            </div>
+          </div>
+          <div className='flex flex-col items-center'>
+            <p className='text-lg font-bold'>What I&apos;m learning now</p>
+            <div className='flex flex-row gap-3 items-center justify-center py-3'>
+              <Icon width='32' height='32' icon='simple-icons:remix' />
+              <Icon width='32' height='32' icon='simple-icons:astro' />
+              <Icon width='32' height='32' icon='cib:rust' />
+              <Icon width='32' height='32' icon='file-icons:webassembly' />
+              <Icon width='32' height='32' icon='cib:svelte' />
+            </div>
+          </div>
+        </div>
         <div className='flex flex-col gap-12'>
           {projects.map((project, idx) => (
             <Project key={project.name} {...project} idx={idx} />

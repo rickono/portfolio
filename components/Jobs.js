@@ -105,7 +105,7 @@ const Jobs = () => {
         'Zaya health is a company that strives to make high-quality mental healthcare more accessible to everyone by demystifying the insurance claims process.',
       responsibilities: [
         'Started integration with various insurance company FHIR-standard APIs to streamline the authentication process for accessing patient insurance data.',
-        'Built React UI components that are currently in production.',
+        'Built features using React and Express that are currently in production.',
         'Created NodeJS Express endpoints to interface the client-side app with the Firestore database.',
       ],
     },

@@ -41,7 +41,7 @@ const Leadership = () => {
           positions={['Vice President', 'Recruitment Chair', 'Social Chair']}
           description={[
             'Elected vice president of my fraternity of 75 people, responsible for maintaining the physical house. Assigned chores to members, and coordinated with contractors, electricians, plumbers, etc.',
-            'Elected recruitment chair, organized a full one-week $35,000 event.',
+            'Elected recruitment chair, organized a full one-week $35,000 event and led daily rush meetings with the entire fraternity (50+ members).',
           ]}
         />
       </div>
