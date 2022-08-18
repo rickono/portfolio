@@ -60,7 +60,7 @@ const Projects = () => {
         ['SCSS', 'akar-icons:sass-fill'],
       ],
       keywords: 'Next JS, Static Site Generation, Framer Motion',
-      github: 'https://github.com/rickono/onolab-client',
+      link: 'http://ono.mit.edu/',
     },
     {
       name: 'Rust+WASM CHIP-8 Interpreter',

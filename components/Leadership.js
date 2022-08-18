@@ -29,7 +29,7 @@ const Leadership = () => {
         <LeadershipCard
           image={Engineers}
           title='MIT Varsity Lightweight Crew'
-          positions={['Captain']}
+          positions={['NCAA D1 Captain']}
           description={[
             'Elected captain of the MIT Varsity Lightweight Crew team.',
             'Represented MIT in the first varsity 8 at the IRA National Championships.',
